@@ -1,4 +1,4 @@
-# ps2_command_room
+# PS2 Command Room
 Command Rooms for Planetside 2
 
 
