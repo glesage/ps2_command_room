@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  platoon: 1
+  squad: 1
+  room_id: 1
+  position_id: 1
+
+two:
+  platoon: 1
+  squad: 1
+  room_id: 1
+  position_id: 1

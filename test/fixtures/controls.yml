@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  NC: 
+  TR: MyString
+  VS: 
+  map_id: 1
+
+two:
+  NC: 
+  TR: MyString
+  VS: 
+  map_id: 1

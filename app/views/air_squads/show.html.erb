@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Platoon:</strong>
+  <%= @air_squad.platoon %>
+</p>
+
+<p>
+  <strong>Squad:</strong>
+  <%= @air_squad.squad %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @air_squad.room_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @air_squad.position_id %>
+</p>
+
+<%= link_to 'Edit', edit_air_squad_path(@air_squad) %> |
+<%= link_to 'Back', air_squads_path %>

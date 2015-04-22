@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faction:</strong>
+  <%= @facility.faction %>
+</p>
+
+<p>
+  <strong>Map:</strong>
+  <%= @facility.map_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @facility.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @facility.position_id %>
+</p>
+
+<p>
+  <strong>Ps2:</strong>
+  <%= @facility.ps2_id %>
+</p>
+
+<p>
+  <strong>Type name:</strong>
+  <%= @facility.type_name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @facility.type_id %>
+</p>
+
+<%= link_to 'Edit', edit_facility_path(@facility) %> |
+<%= link_to 'Back', facilities_path %>

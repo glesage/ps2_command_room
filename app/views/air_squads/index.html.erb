@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Air Squads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Platoon</th>
+      <th>Squad</th>
+      <th>Room</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @air_squads.each do |air_squad| %>
+      <tr>
+        <td><%= air_squad.platoon %></td>
+        <td><%= air_squad.squad %></td>
+        <td><%= air_squad.room_id %></td>
+        <td><%= air_squad.position_id %></td>
+        <td><%= link_to 'Show', air_squad %></td>
+        <td><%= link_to 'Edit', edit_air_squad_path(air_squad) %></td>
+        <td><%= link_to 'Destroy', air_squad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Air squad', new_air_squad_path %>

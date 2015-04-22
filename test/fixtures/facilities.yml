@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  faction: 1
+  map_id: 1
+  name: MyString
+  position_id: 1
+  ps2_id: 1
+  type_name: MyString
+  type_id: 1
+
+two:
+  faction: 1
+  map_id: 1
+  name: MyString
+  position_id: 1
+  ps2_id: 1
+  type_name: MyString
+  type_id: 1

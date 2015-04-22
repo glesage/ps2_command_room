@@ -1,0 +1,33 @@
+<%= form_for(@ground_squad) do |f| %>
+  <% if @ground_squad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ground_squad.errors.count, "error") %> prohibited this ground_squad from being saved:</h2>
+
+      <ul>
+      <% @ground_squad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :platoon %><br>
+    <%= f.number_field :platoon %>
+  </div>
+  <div class="field">
+    <%= f.label :squad %><br>
+    <%= f.number_field :squad %>
+  </div>
+  <div class="field">
+    <%= f.label :room_id %><br>
+    <%= f.number_field :room_id %>
+  </div>
+  <div class="field">
+    <%= f.label :position_id %><br>
+    <%= f.number_field :position_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nc:</strong>
+  <%= @population.NC %>
+</p>
+
+<p>
+  <strong>Tr:</strong>
+  <%= @population.TR %>
+</p>
+
+<p>
+  <strong>Vs:</strong>
+  <%= @population.VS %>
+</p>
+
+<p>
+  <strong>Map:</strong>
+  <%= @population.map_id %>
+</p>
+
+<%= link_to 'Edit', edit_population_path(@population) %> |
+<%= link_to 'Back', populations_path %>

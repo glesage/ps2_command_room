@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
 
+  resources :controls
+  resources :populations
+  resources :facilities
+  resources :hexes
+  resources :servers
+  resources :maps
+  resources :ground_squads
+  resources :air_squads
+  resources :positions
+  resources :members
+  resources :room_members
+  resources :matches
+  resources :rooms
   root 'home#index'
 
   get 'home/index'

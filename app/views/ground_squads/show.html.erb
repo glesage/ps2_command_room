@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Platoon:</strong>
+  <%= @ground_squad.platoon %>
+</p>
+
+<p>
+  <strong>Squad:</strong>
+  <%= @ground_squad.squad %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @ground_squad.room_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @ground_squad.position_id %>
+</p>
+
+<%= link_to 'Edit', edit_ground_squad_path(@ground_squad) %> |
+<%= link_to 'Back', ground_squads_path %>

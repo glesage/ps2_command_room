@@ -1,0 +1,33 @@
+<%= form_for(@population) do |f| %>
+  <% if @population.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@population.errors.count, "error") %> prohibited this population from being saved:</h2>
+
+      <ul>
+      <% @population.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :NC %><br>
+    <%= f.text_field :NC %>
+  </div>
+  <div class="field">
+    <%= f.label :TR %><br>
+    <%= f.text_field :TR %>
+  </div>
+  <div class="field">
+    <%= f.label :VS %><br>
+    <%= f.text_field :VS %>
+  </div>
+  <div class="field">
+    <%= f.label :map_id %><br>
+    <%= f.number_field :map_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

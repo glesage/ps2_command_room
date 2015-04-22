@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ground Squads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Platoon</th>
+      <th>Squad</th>
+      <th>Room</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ground_squads.each do |ground_squad| %>
+      <tr>
+        <td><%= ground_squad.platoon %></td>
+        <td><%= ground_squad.squad %></td>
+        <td><%= ground_squad.room_id %></td>
+        <td><%= ground_squad.position_id %></td>
+        <td><%= link_to 'Show', ground_squad %></td>
+        <td><%= link_to 'Edit', edit_ground_squad_path(ground_squad) %></td>
+        <td><%= link_to 'Destroy', ground_squad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ground squad', new_ground_squad_path %>

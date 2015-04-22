@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Facility:</strong>
+  <%= @hex.facility_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @hex.position_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @hex.type %>
+</p>
+
+<%= link_to 'Edit', edit_hex_path(@hex) %> |
+<%= link_to 'Back', hexes_path %>

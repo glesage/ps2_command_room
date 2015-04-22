@@ -17,6 +17,10 @@ h2 {
 a {
 	color: $bright-color;
 }
+p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 body {
   font: 100% $font-stack;
   color: $bright-color;
@@ -24,6 +28,7 @@ body {
   margin-left: 50px;
   margin-right: 50px;
 }
+
 .logo {
 	display: block;
   margin-left: auto;
@@ -31,24 +36,25 @@ body {
   max-width: 60%;
   max-height: 100px;
 }
+
 #footer {
   display: table;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
 }
-
+#table {
+  display: table;
+}
 #row  {
   display: table-row;
 }
-
+#col  {
+  display: table-column;
+}
 #cell {
   display: table-cell;
   min-width:100px;
   max-width:30%;
   text-align:center;
-}
-p {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }

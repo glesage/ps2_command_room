@@ -1,0 +1,29 @@
+<%= form_for(@hex) do |f| %>
+  <% if @hex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hex.errors.count, "error") %> prohibited this hex from being saved:</h2>
+
+      <ul>
+      <% @hex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :facility_id %><br>
+    <%= f.number_field :facility_id %>
+  </div>
+  <div class="field">
+    <%= f.label :position_id %><br>
+    <%= f.number_field :position_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.number_field :type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
