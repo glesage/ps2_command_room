@@ -1,0 +1,28 @@
+<p> <h1>Search</h1> </p>
+	<%= form_tag :action => 'search' do %>
+	<p>What maps are you looking for?:
+	<%= text_field_tag 'searchinput', @searchinput %> </p>
+	<hr/>
+	<% if @results>0 %>
+		<% if @maplist.length >0 %>
+			<p> Here are the search results:</p>
+			<table>
+				<tr>
+					<th>Map Name</th>
+					<th>PS2 Id</th>
+					<th>Server Id</th>
+				</tr>
+				<% @maplist.each do |m| %>
+					<tr>
+						<td><%= link_to m.name, map_path(m.id) %></td>
+						<td><%= m.ps2_id %></td>
+						<td><%= m.server_id %></td>
+					</tr>
+				<% end %>
+			</table>
+		<% else%>
+		<p>There were no maps with your search criteria. Try again!</p>
+		<% end %>
+	<% end %>
+	<%= submit_tag 'Search' %>
+<% end %>

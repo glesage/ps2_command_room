@@ -9,7 +9,10 @@
 <body>
 
 <%= link_to(image_tag("logo.png", :alt => "welcome", :title => "Home", :class => "logo"), home_index_path) %>
+<%= link_to 'ANNOUNCEMENTS', home_announcements_path %>
+
 <%= yield %>
+
 <%= render "shared/footer" %>
 
 </body>

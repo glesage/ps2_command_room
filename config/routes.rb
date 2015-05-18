@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'home#index'
+
   resources :controls
   resources :populations
   resources :facilities
@@ -13,13 +15,18 @@ Rails.application.routes.draw do
   resources :room_members
   resources :matches
   resources :rooms
-  root 'home#index'
+
+  get "home/search"
+  post "home/search"
 
   get 'home/index'
   get 'home/about'
   get 'home/contact'
   get 'home/help'
   get 'home/privacy'
+  get 'home/conditions'
+  get 'home/announcements'
+  get 'home/site'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
