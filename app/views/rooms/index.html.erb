@@ -16,7 +16,7 @@
     <% @rooms.each do |room| %>
       <tr>
         <td><%= room.name %></td>
-        <td><%= room.owner %></td>
+        <td><%= room.owner_id %></td>
         <td><%= room.token %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>

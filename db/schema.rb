@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20150422180722) do
   create_table "hexes", force: :cascade do |t|
     t.integer  "facility_id"
     t.integer  "position_id"
-    t.integer  "type"
+    t.integer  "type_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 20150422180722) do
 
   create_table "rooms", force: :cascade do |t|
     t.string   "name"
-    t.integer  "owner"
+    t.integer  "owner_id"
     t.string   "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

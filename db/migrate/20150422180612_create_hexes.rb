@@ -3,7 +3,7 @@ class CreateHexes < ActiveRecord::Migration
     create_table :hexes do |t|
       t.integer :facility_id
       t.integer :position_id
-      t.integer :type
+      t.integer :type_id
 
       t.timestamps null: false
     end
