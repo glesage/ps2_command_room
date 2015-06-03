@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @promotions = Promotion.all
+    @promotions = Promotion.where("start_date <= ? AND end_date >= ? ", Date.today, Date.today);
   end
 
   def about
