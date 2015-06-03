@@ -70,3 +70,7 @@ AirSquad.create([{platoon: 1, squad: 1, room_id: 1, position_id: 1},
 GroundSquad.create([{platoon: 1, squad: 1, room_id: 1, position_id: 2},
 					{platoon: 1, squad: 2, room_id: 2, position_id: 3},
 					{platoon: 2, squad: 1, room_id: 3, position_id: 7}]);
+
+Promotion.create([{title: "First ad", description: "My very first ad!", image_path: "ad1.png", start_date: Date.today(), end_date:  Date.today()},
+				{title: "Second ad", description: "I'm getting pro!", image_path: "ad2.png", start_date: Date.tomorrow(), end_date:  Date.tomorrow()},
+				{title: "Third ad", description: "You gotta see this!", image_path: "ad3.png", start_date: Date.today(), end_date:  Date.tomorrow()}]);
