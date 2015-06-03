@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :promotions
   root 'home#index'
 
   resources :controls
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
   resources :room_members
   resources :matches
   resources :rooms
+  resources :promotions
 
   get "home/search"
   post "home/search"
