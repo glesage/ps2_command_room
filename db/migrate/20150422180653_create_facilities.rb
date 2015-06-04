@@ -7,6 +7,8 @@ class CreateFacilities < ActiveRecord::Migration
       t.string :type_name
       t.integer :type_id
 
+      t.integer :map_id
+
       t.timestamps null: false
     end
   end

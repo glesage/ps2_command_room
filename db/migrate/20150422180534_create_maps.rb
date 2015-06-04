@@ -4,6 +4,8 @@ class CreateMaps < ActiveRecord::Migration
       t.string :name
       t.integer :ps2_id
 
+      t.integer :server_id
+
       t.timestamps null: false
     end
   end

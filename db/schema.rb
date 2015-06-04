@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20150603172730) do
   create_table "air_squads", force: :cascade do |t|
     t.integer  "platoon"
     t.integer  "squad"
+    t.integer  "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150603172730) do
     t.string   "NC"
     t.string   "TR"
     t.string   "VS"
+    t.integer  "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150603172730) do
     t.integer  "ps2_id"
     t.string   "type_name"
     t.integer  "type_id"
+    t.integer  "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,25 +44,29 @@ ActiveRecord::Schema.define(version: 20150603172730) do
   create_table "ground_squads", force: :cascade do |t|
     t.integer  "platoon"
     t.integer  "squad"
+    t.integer  "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "hexes", force: :cascade do |t|
     t.integer  "type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "facility_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "maps", force: :cascade do |t|
     t.string   "name"
     t.integer  "ps2_id"
+    t.integer  "server_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "matches", force: :cascade do |t|
     t.datetime "end_time"
+    t.integer  "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -67,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150603172730) do
   create_table "members", force: :cascade do |t|
     t.string   "email"
     t.string   "name"
+    t.integer  "server_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,6 +83,7 @@ ActiveRecord::Schema.define(version: 20150603172730) do
     t.string   "NC"
     t.string   "TR"
     t.string   "VS"
+    t.integer  "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,8 +91,11 @@ ActiveRecord::Schema.define(version: 20150603172730) do
   create_table "positions", force: :cascade do |t|
     t.integer  "x"
     t.integer  "y"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "hex_id"
+    t.integer  "air_squad_id"
+    t.integer  "ground_squad_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "promotions", force: :cascade do |t|

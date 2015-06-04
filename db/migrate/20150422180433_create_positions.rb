@@ -4,6 +4,10 @@ class CreatePositions < ActiveRecord::Migration
       t.integer :x
       t.integer :y
 
+      t.integer :hex_id
+      t.integer :air_squad_id
+      t.integer :ground_squad_id
+
       t.timestamps null: false
     end
   end

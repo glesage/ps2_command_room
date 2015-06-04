@@ -5,6 +5,8 @@ class CreatePopulations < ActiveRecord::Migration
       t.string :TR
       t.string :VS
 
+      t.integer :map_id
+
       t.timestamps null: false
     end
   end

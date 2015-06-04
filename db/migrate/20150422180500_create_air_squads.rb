@@ -4,6 +4,8 @@ class CreateAirSquads < ActiveRecord::Migration
       t.integer :platoon
       t.integer :squad
 
+      t.integer :room_id
+
       t.timestamps null: false
     end
   end

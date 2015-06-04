@@ -6,10 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Position.create([{x: 1, y: 1}, {x: 1, y: 2},{x: 2, y: 1},
-				{x: 2, y: 2}, {x: 2, y: 3},{x: 3, y: 2}, 
-				{x: 3, y: 3}, {x: 3, y: 4},{x: 4, y: 3}, 
-				{x: 4, y: 4}, {x: 4, y: 5},{x: 5, y: 4}]);
+Position.create([{x: 1, y: 1, hex_id: 1, air_squad_id: 1},
+				{x: 1, y: 2, hex_id: 2, air_squad_id: 2},
+				{x: 2, y: 1, hex_id: 3, air_squad_id: 3},
+				{x: 2, y: 2, hex_id: 4, ground_squad_id: 1},
+				{x: 2, y: 3, hex_id: 5, ground_squad_id: 2},
+				{x: 3, y: 2, hex_id: 6, ground_squad_id: 3}]);
 
 Server.create([{name: "Connery", ps2_id: 1}, {name: "Jaeger", ps2_id: 2},
 				{name: "Miller", ps2_id: 3}, {name: "Emerald", ps2_id: 4}]);
@@ -35,41 +37,37 @@ Population.create([{NC: 25, TR: 30, VS: 25, map_id: 1},
 					{NC: 30, TR: 20, VS: 50, map_id: 5},
 					{NC: 25, TR: 25, VS: 50, map_id: 6}]);
 
-Facility.create([{faction: 1, map_id: 1, name: "Hvar", 	position_id: 1, ps2_id: 1, type_name: "Tech Plant", 	type_id: 1},
-				{faction: 2, map_id: 2, name: "Mekala", position_id: 2, ps2_id: 2, type_name: "Amp Station", 	type_id: 3},
-				{faction: 3, map_id: 1, name: "Nut", 	position_id: 3, ps2_id: 3, type_name: "Bio Lab", 		type_id: 5},
-				{faction: 1, map_id: 3, name: "Zurvan", position_id: 4, ps2_id: 4, type_name: "Amp Station", 	type_id: 3},
-				{faction: 2, map_id: 2, name: "Allatu", position_id: 5, ps2_id: 5, type_name: "Mine", 			type_id: 2},
-				{faction: 1, map_id: 1, name: "Mao", 	position_id: 6, ps2_id: 6, type_name: "Tech Plant", 	type_id: 1}]);
+Facility.create([{faction: 1, map_id: 1, name: "Hvar", 	ps2_id: 1, type_name: "Tech Plant", 	type_id: 1},
+				{faction: 2, map_id: 2, name: "Mekala", ps2_id: 2, type_name: "Amp Station", 	type_id: 3},
+				{faction: 3, map_id: 1, name: "Nut", 	ps2_id: 3, type_name: "Bio Lab", 		type_id: 5},
+				{faction: 1, map_id: 3, name: "Zurvan", ps2_id: 4, type_name: "Amp Station", 	type_id: 3},
+				{faction: 2, map_id: 2, name: "Allatu", ps2_id: 5, type_name: "Mine", 			type_id: 2},
+				{faction: 1, map_id: 1, name: "Mao", 	ps2_id: 6, type_name: "Tech Plant", 	type_id: 1}]);
 
-Hex.create([{facility_id: 1, position_id: 1, type_id: 1},
-			{facility_id: 2, position_id: 2, type_id: 3},
-			{facility_id: 3, position_id: 3, type_id: 5},
-			{facility_id: 4, position_id: 4, type_id: 3},
-			{facility_id: 5, position_id: 5, type_id: 2},
-			{facility_id: 6, position_id: 6, type_id: 1}]);
+Hex.create([{facility_id: 1, type_id: 1},
+			{facility_id: 2, type_id: 3},
+			{facility_id: 3, type_id: 5},
+			{facility_id: 4, type_id: 3},
+			{facility_id: 5, type_id: 2},
+			{facility_id: 6, type_id: 1}]);
 
-Member.create([{email: "1@mail.com", name: "first user"},
-				{email: "2@mail.com", name: "sec user"},
-				{email: "3@mail.com", name: "third user"}]);
+Member.create([{email: "1@mail.com", name: "first user", server_id: 1},
+				{email: "2@mail.com", name: "sec user", server_id: 1},
+				{email: "3@mail.com", name: "third user", server_id: 2}]);
 
-Room.create([{name: "Delta Squad", owner_id: 1, token: "test2"},
-			{name: "Charlie Squad", owner_id: 3, token: "test2"}]);
-
-RoomMember.create([{member_id: 1, room_id: 1},
-					{member_id: 2, room_id: 1},
-					{member_id: 3, room_id: 2}]);
+Room.create([{name: "Delta Squad", token: "test2"},
+			{name: "Charlie Squad", token: "test2"}]);
 
 Match.create([{room_id: 1, end_time: DateTime.new()},
 			  {room_id: 3, end_time: DateTime.new()}]);
 
-AirSquad.create([{platoon: 1, squad: 1, room_id: 1, position_id: 1},
-				{platoon: 1, squad: 2, room_id: 1, position_id: 4},
-				{platoon: 2, squad: 1, room_id: 2, position_id: 6}]);
+AirSquad.create([{platoon: 1, squad: 1, room_id: 1},
+				{platoon: 1, squad: 2, room_id: 1},
+				{platoon: 2, squad: 1, room_id: 2}]);
 
-GroundSquad.create([{platoon: 1, squad: 1, room_id: 1, position_id: 2},
-					{platoon: 1, squad: 2, room_id: 2, position_id: 3},
-					{platoon: 2, squad: 1, room_id: 3, position_id: 7}]);
+GroundSquad.create([{platoon: 1, squad: 1, room_id: 1},
+					{platoon: 1, squad: 2, room_id: 2},
+					{platoon: 2, squad: 1, room_id: 3}]);
 
 Promotion.create([{title: "First ad", description: "My very first ad!", image_path: "ad1.png", start_date: Date.today(), end_date:  Date.today()},
 				{title: "Second ad", description: "I'm getting pro!", image_path: "ad2.png", start_date: Date.tomorrow(), end_date:  Date.tomorrow()},
