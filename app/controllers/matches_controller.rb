@@ -15,10 +15,12 @@ class MatchesController < ApplicationController
   # GET /matches/new
   def new
     @match = Match.new
+    @room_choice = Room.order("name").collect do |m| [m.name] end
   end
 
   # GET /matches/1/edit
   def edit
+    @room_choice = Room.order("name").collect do |m| [m.name] end
   end
 
   # POST /matches

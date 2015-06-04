@@ -15,10 +15,12 @@ class HexesController < ApplicationController
   # GET /hexes/new
   def new
     @hex = Hex.new
+    @facility_choice = Facility.order("name").collect do |m| [m.name] end
   end
 
   # GET /hexes/1/edit
   def edit
+    @facility_choice = Facility.order("name").collect do |m| [m.name] end
   end
 
   # POST /hexes

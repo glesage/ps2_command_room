@@ -15,10 +15,12 @@ class ControlsController < ApplicationController
   # GET /controls/new
   def new
     @control = Control.new
+    @map_choice = Map.order("name").collect do |m| [m.name] end
   end
 
   # GET /controls/1/edit
   def edit
+    @map_choice = Map.order("name").collect do |m| [m.name] end
   end
 
   # POST /controls

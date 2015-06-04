@@ -15,10 +15,12 @@ class AirSquadsController < ApplicationController
   # GET /air_squads/new
   def new
     @air_squad = AirSquad.new
+    @room_choice = Room.order("name").collect do |r| [r.name] end
   end
 
   # GET /air_squads/1/edit
   def edit
+    @room_choice = Room.order("name").collect do |r| [r.name] end
   end
 
   # POST /air_squads

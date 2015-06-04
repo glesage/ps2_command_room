@@ -21,11 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :room_id %><br>
-    <%= f.number_field :room_id %>
-  </div>
-  <div class="field">
-    <%= f.label :position_id %><br>
-    <%= f.number_field :position_id %>
+    <%= f.select :room_id, @room_choice %>
   </div>
   <div class="actions">
     <%= f.submit %>

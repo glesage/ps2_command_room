@@ -15,10 +15,12 @@ class GroundSquadsController < ApplicationController
   # GET /ground_squads/new
   def new
     @ground_squad = GroundSquad.new
+    @room_choice = Room.order("name").collect do |m| [m.name] end
   end
 
   # GET /ground_squads/1/edit
   def edit
+    @room_choice = Room.order("name").collect do |m| [m.name] end
   end
 
   # POST /ground_squads

@@ -17,15 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :map_id %><br>
-    <%= f.number_field :map_id %>
+    <%= f.select :map_id, @map_choice %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :position_id %><br>
-    <%= f.number_field :position_id %>
   </div>
   <div class="field">
     <%= f.label :ps2_id %><br>

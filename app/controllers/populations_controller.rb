@@ -15,10 +15,12 @@ class PopulationsController < ApplicationController
   # GET /populations/new
   def new
     @population = Population.new
+    @map_choice = Map.order("name").collect do |m| [m.name] end
   end
 
   # GET /populations/1/edit
   def edit
+    @map_choice = Map.order("name").collect do |m| [m.name] end
   end
 
   # POST /populations

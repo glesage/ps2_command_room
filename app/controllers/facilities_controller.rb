@@ -15,10 +15,12 @@ class FacilitiesController < ApplicationController
   # GET /facilities/new
   def new
     @facility = Facility.new
+    @map_choice = Map.order("name").collect do |m| [m.name] end
   end
 
   # GET /facilities/1/edit
   def edit
+    @map_choice = Map.order("name").collect do |m| [m.name] end
   end
 
   # POST /facilities

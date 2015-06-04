@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Facility</th>
-      <th>Position</th>
       <th>Type</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +15,6 @@
     <% @hexes.each do |hex| %>
       <tr>
         <td><%= hex.facility_id %></td>
-        <td><%= hex.position_id %></td>
         <td><%= hex.type_id %></td>
         <td><%= link_to 'Show', hex %></td>
         <td><%= link_to 'Edit', edit_hex_path(hex) %></td>

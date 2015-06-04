@@ -13,11 +13,7 @@
 
   <div class="field">
     <%= f.label :facility_id %><br>
-    <%= f.number_field :facility_id %>
-  </div>
-  <div class="field">
-    <%= f.label :position_id %><br>
-    <%= f.number_field :position_id %>
+    <%= f.select :facility_id, @facility_choice %>
   </div>
   <div class="field">
     <%= f.label :type_id %><br>

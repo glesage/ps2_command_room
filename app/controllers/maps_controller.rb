@@ -15,10 +15,12 @@ class MapsController < ApplicationController
   # GET /maps/new
   def new
     @map = Map.new
+    @server_choice = Server.order("name").collect do |m| [m.name] end
   end
 
   # GET /maps/1/edit
   def edit
+    @server_choice = Server.order("name").collect do |m| [m.name] end
   end
 
   # POST /maps

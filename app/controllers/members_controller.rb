@@ -15,10 +15,12 @@ class MembersController < ApplicationController
   # GET /members/new
   def new
     @member = Member.new
+    @server_choice = Server.order("name").collect do |m| [m.name] end
   end
 
   # GET /members/1/edit
   def edit
+    @server_choice = Server.order("name").collect do |m| [m.name] end
   end
 
   # POST /members
