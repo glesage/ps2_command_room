@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @email = Email.new;
   end
 
   def privacy

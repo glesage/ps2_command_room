@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603172730) do
+ActiveRecord::Schema.define(version: 20150611012511) do
 
   create_table "air_squads", force: :cascade do |t|
     t.integer  "platoon"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20150603172730) do
     t.string   "TR"
     t.string   "VS"
     t.integer  "map_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string   "sender"
+    t.string   "subject"
+    t.string   "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
